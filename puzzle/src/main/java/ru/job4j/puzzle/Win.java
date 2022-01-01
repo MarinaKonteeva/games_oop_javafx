@@ -4,8 +4,9 @@ public class Win {
     public static boolean check(int[][] board) {
         boolean rsl = false;
         for (int i = 0; i < board.length; i++) {
-            if (checkV(board, i) || checkG(board, i)) {
+            if (board[i][i] == 1 && (checkV(board, i) || checkG(board, i))) {
                 rsl = true;
+                break;
             }
         }
 
